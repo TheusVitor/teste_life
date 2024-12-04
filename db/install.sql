@@ -1,15 +1,15 @@
 -- Remover tabelas existentes, começando pelas dependentes
 DROP TABLE IF EXISTS rastreamento;
-DROP TABLE IF EXISTS funcionarios;
+DROP TABLE IF EXISTS funcionario;
 DROP TABLE IF EXISTS funcao;
-DROP TABLE IF EXISTS veiculos;
+DROP TABLE IF EXISTS veiculo;
 
 -- Criar tabelas novamente
-CREATE TABLE veiculos (
+CREATE TABLE veiculo (
     id INT AUTO_INCREMENT PRIMARY KEY,
     placa VARCHAR(10) NOT NULL,
     nome VARCHAR(100) NOT NULL,
-    vel_max DECIMAL(5, 2) NOT NULL
+    vel_maxima DECIMAL(5, 2) NOT NULL
 );
 
 CREATE TABLE funcao (
@@ -17,7 +17,7 @@ CREATE TABLE funcao (
     nome VARCHAR(100) NOT NULL
 );
 
-CREATE TABLE funcionarios (
+CREATE TABLE funcionario (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(100) NOT NULL,
     funcao_id INT NOT NULL,
@@ -32,8 +32,8 @@ CREATE TABLE rastreamento (
     velocidade_registrada DECIMAL(5, 2) NOT NULL,
     latitude DECIMAL(10, 8) NOT NULL,
     longitude DECIMAL(11, 8) NOT NULL,
-    FOREIGN KEY (veiculo_id) REFERENCES veiculos(id),
-    FOREIGN KEY (funcionario_id) REFERENCES funcionarios(id)
+    FOREIGN KEY (veiculo_id) REFERENCES veiculo(id),
+    FOREIGN KEY (funcionario_id) REFERENCES funcionario(id)
 );
 
 -- Inserts para a tabela funcao
@@ -49,8 +49,8 @@ INSERT INTO funcao (nome) VALUES
 ('Engenheiro'),
 ('Diretor');
 
--- Inserts para a tabela funcionarios
-INSERT INTO funcionarios (nome, funcao_id) VALUES
+-- Inserts para a tabela funcionario
+INSERT INTO funcionario (nome, funcao_id) VALUES
 ('João Silva', 1),
 ('Maria Oliveira', 2),
 ('Carlos Souza', 3),
@@ -62,8 +62,8 @@ INSERT INTO funcionarios (nome, funcao_id) VALUES
 ('Rodrigo Borges', 9),
 ('Patrícia Almeida', 10);
 
--- Inserts para a tabela veiculos
-INSERT INTO veiculos (placa, nome, vel_max) VALUES
+-- Inserts para a tabela veiculo
+INSERT INTO veiculo (placa, nome, vel_maxima) VALUES
 ('ABC1234', 'Caminhão Volvo', 80.00),
 ('DEF5678', 'Ônibus Mercedes', 60.00),
 ('GHI9012', 'Carro Sedan', 120.00),
