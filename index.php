@@ -1,6 +1,6 @@
 <?php
-    require('php/Utils.php');
-    require('php/Database.php');
+    require_once('php/Utils.php');
+    require_once('php/Database.php');
 
     if(!empty($_REQUEST['mdl']) && !empty($_REQUEST['file'])) {
 

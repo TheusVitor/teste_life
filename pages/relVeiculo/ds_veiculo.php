@@ -1,5 +1,5 @@
 <?php
-require('../../php/Database.php');
+require_once(__DIR__ . '/../../php/Database.php');
 
 $where = '';
 
