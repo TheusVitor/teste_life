@@ -14,8 +14,8 @@ Certifique-se de ter as seguintes ferramentas instaladas no seu ambiente:
 Para verificar se estão instalados, basta rodar os comandos abaixo no terminal:
 
 ```bash
-$ docker --version
-$ docker-compose --version
+docker --version
+docker-compose --version
 ```
 
 ---
