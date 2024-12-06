@@ -6,10 +6,9 @@ Elaborei este guia para demonstrar como configurar e executar o projeto utilizan
 
 ## **Pré-requisitos**
 
-Certifique-se de ter as seguintes ferramentas instaladas no seu ambiente:
+Certifique-se de ter o Docker instalado no seu ambiente. As versões mais recentes do Docker já incluem o Docker Compose integrado.
 
 - [Docker](https://www.docker.com/)
-- [Docker Compose](https://docs.docker.com/compose/)
 
 Para verificar se estão instalados, basta rodar os comandos abaixo no terminal:
 
