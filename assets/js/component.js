@@ -116,7 +116,7 @@ var Cmp = {
             cmp: this
         });
 
-        var table = $('<table>', { id: config.id, class: 'table' });
+        var table = $('<table>', { id: config.id, class: 'table table-striped' });
 
         var thead = $('<thead>');
         var tbody = $('<tbody>');
