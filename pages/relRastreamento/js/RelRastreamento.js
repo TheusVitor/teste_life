@@ -100,7 +100,6 @@ Cmp.RelRastreamento = function() {
                 },
                 success: function(res) {
                     Cmp.hideLoading();
-                    console.log(res)
                     if(res.status == 'success') {
                         res.data.forEach(row => {
                             row.diff_vel = row.diff_vel + '%';
