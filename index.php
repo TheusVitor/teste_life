@@ -1,6 +1,6 @@
 <?php
-    require_once('php/Utils.php');
-    require_once('php/Database.php');
+    require('php/Utils.php');
+    require('php/Database.php');
 
     if(!empty($_REQUEST['mdl']) && !empty($_REQUEST['file'])) {
 
@@ -24,7 +24,12 @@
                     require('pages/relFuncionario/funcionario.php');
                     JSRequire('relFuncionario', 'RelFuncionario.js');
                     break;
-    
+                    
+                case 'relRastreamento':
+                    require('pages/relRastreamento/rastreamento.php');
+                    JSRequire('relRastreamento', 'RelRastreamento.js');
+                    break;
+
             }
     
         } else {

@@ -1,7 +1,5 @@
 <?php
 
-require_once(__DIR__ . '/../../php/Database.php');
-
 $where = '';
 
 if(!empty($_REQUEST['nome'])) {

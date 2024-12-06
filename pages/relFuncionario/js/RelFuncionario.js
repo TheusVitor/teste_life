@@ -34,6 +34,7 @@ Cmp.RelFuncionario = function() {
                     }
                 ]
             });
+            private.buscar();
         },
 
         buscar: function() {
@@ -59,6 +60,6 @@ Cmp.RelFuncionario = function() {
 
     this.init = function() {
         private.render();
-    }
+    };
 
-}
+};

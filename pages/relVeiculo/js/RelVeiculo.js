@@ -38,11 +38,13 @@ Cmp.RelVeiculo = function() {
                     }
                 ]
             });
+
+            private.buscar();
         },
 
         buscar: function() {
             Cmp.showLoading();
-
+            
             Cmp.request({
                 url: 'index.php?mdl=relVeiculo&file=ds_veiculo.php',
                 params: {
@@ -58,11 +60,9 @@ Cmp.RelVeiculo = function() {
                 }
             });
         }
-
     };
 
     this.init = function() {
         private.render();
-    }
-
-}
+    };
+};
